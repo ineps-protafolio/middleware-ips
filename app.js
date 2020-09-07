@@ -10,7 +10,7 @@ var ip = require('ip');
 app.use( function(req, res, next) {
     var invalidIp = false;
     console.log('middleware');
-    var blackList = [config.BLACKLIST];
+    var blackList = split(config.BLACKLIST);
     
     //Revisar grupo de IPS de  BLACKLIST
     for (var i = 0, len = blackList.length; i < len; i++) {
