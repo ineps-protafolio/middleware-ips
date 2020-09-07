@@ -12,6 +12,7 @@ app.use( function(req, res, next) {
     console.log('middleware');
     var blackList = config.BLACKLIST.split(",");
     console.log(blackList);
+    console.log('ip-peticion: ', ip.address());
     
     //Revisar grupo de IPS de  BLACKLIST
     for (var i = 0, len = blackList.length; i < len; i++) {
